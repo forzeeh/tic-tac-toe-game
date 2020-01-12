@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #718093;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game {
+  width: 300px;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  box-shadow: 0 0 5px 5px #333;
+  border-radius: 5px;
+  position: relative;
+}
+
+.squares {
+  margin: 0.3px;
+  background: none;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5em;
+  cursor: pointer;
+
+  /* запрет на выделение */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  
+  transition: border-radius 0.4s, background .4s;
+}
+
+.squares:hover {
+  background: #cdced3;
+  border-radius: 10px;
+}
+
+.restart-gameBtn {
+  width: 100px;
+  background: #6F1E51;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-top: 20px;
+  outline:none;
+}
+.restart-gameBtn:hover {
+  box-shadow: 0 0 10px 10px black;
+}
+
+.score {
+  width: 325px;
+  height: 38px;
+  background: none;
+  position: absolute;
+  left: -5px;
+  top: -50px;
+  display: flex;
+  flex-direction: row;
+}
+.score p {
+  width: 46%;
+  margin: 0 1%;
+  height: 100%;
+  background: none;
+  box-shadow: 0 0 5px 1px #ff6b6b;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose-sign {
+  position: absolute;
+  left: -175px;
+  top: 102px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 3em;
+}
+
+.choose-sign p {
+  margin: 0 10px;
+  background: orange;
+  border: 13px solid #333;
+  width: 65px;
+  text-align: center;
+  cursor: pointer;
+  /* запрет на выделение */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.alert {
+  width: 400px;
+  height: 415px;
+  position: absolute;
+  top: -53px;
+  left: -49px;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3em;
+  color: red;
+  text-transform: uppercase;
+}
+
+.alert button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: none;
+  color: white;
+  height: 30px;
+  width: 30px;
+  font-size: 0.3em;
+}
